@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="Style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jura" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a class="active" href="home.html">Home</a>
+    <a href="jeep.html">jeep</a>
+    <a href="Ferrari.html">ferrari</a>
+    <a href="Rolls_Royce.html">Rolls Royce</a>
+    <a href="reg.html">Registration</a>
+  </div>
+  <div class="header">
+    <div class="opacity"></div>
+    <p class="welcome">Welcome To Our Store</p>
+    <p class="want">Please click on the Car You want</p>
+
+  </div>
+
+
+  <div class="container">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <a href="jeep.html"><img src="jeep_PNG142.png" style="width:30.5%;  top:-60px; left: 50px; "></a>
+        <div class="text">Jeep</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <a href="Ferrari.html"><img src="ferrari_PNG10680.png" style="width:50%"></a>
+        <div class="text">Ferrari</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <a href="Rolls_Royce.html"><img src="rolls_royce_PNG50.png" style="width:53%"></a>
+        <div class="text">Rolls Royce</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </div>
+
+  <div class="about">
+    <p>
+      <span>A B O U T U S</span> Why Make Us your Number One Used Car Dealer?
+      Overland Park, Derby and Kansas City, KS area drivers won't find a used car dealership that's more dedicated to
+      their satisfaction. Car Store USA knows that some used car dealers push false advertising and gimmicky sales
+      pitches; but that's not something you'll find when you shop with us. We listen to our customers' needs and keep
+      your budget in mind when highlighting any of our used cars for you. We want you to shop our selection of pre-owned
+      cars, trucks and SUVs at your own pace so you can find the most ideal model for your budget, needs and driving
+      style.
+
+    </p>
+    <img src="PNGHunt.com.png" width="700" height="500">
+  </div>
+</body>
+
+</html>
